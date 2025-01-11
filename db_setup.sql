@@ -8,3 +8,5 @@ CREATE TABLE tasks (
     description TEXT,
     status ENUM('Pending', 'Completed') DEFAULT 'Pending'
 );
+
+SELECT *FROM tasks;
