@@ -3,7 +3,7 @@ import mysql.connector
 
 app = Flask(__name__)
 
-# MySQL Connection
+#here comment updated by Elchin
 db = mysql.connector.connect(
     host="localhost",
     user="root",
