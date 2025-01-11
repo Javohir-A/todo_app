@@ -6,8 +6,8 @@ app = Flask(__name__)
 # MySQL Connection
 db = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="1702",
+    user="mysql",
+    password="password",
     database="todo_app"
 )
 cursor = db.cursor(dictionary=True)
