@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form action="/add" method="POST" class="add-task-form">
+        <input type="text" name="title" placeholder="Task Title" required>
+        <textarea name="description" placeholder="Task Description"></textarea>
+        <button type="submit">Add Task</button>
+    </form>
+    <ul class="task-list">
+        {% for task in tasks %}
+        <li class="{{ 'completed' if task.status == 'Completed' else '' }}">
+            <h2>{{ task.title }}</h2>
+            <p>{{ task.description }}</p>
+            <form action="/update/{{ task.id }}" method="POST" class="status-form">
+                <select name="status" onchange="this.form.submit()">
+                    <option value="Pending" {% if task.status == 'Pending' %}selected{% endif %}>Pending</option>
+                    <option value="Completed" {% if task.status == 'Completed' %}selected{% endif %}>Completed</option>
+                </select>
+            </form>
+            <form action="/delete/{{ task.id }}" method="POST" class="delete-form">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

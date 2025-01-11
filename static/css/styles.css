@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Task Form */
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.add-task-form input, .add-task-form textarea, .add-task-form button {
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-task-form input:focus, 
+.add-task-form textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.add-task-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.add-task-form button:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Task List */
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    background: #f9f9f9;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.task-list li:hover {
+    transform: translateY(-3px);
+}
+
+.task-list li.completed {
+    background: #e6f7e6;
+    border-left: 4px solid #4caf50;
+}
+
+/* Task Content */
+.task-list li h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.task-list li p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Status Dropdown */
+.status-form select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.status-form select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Delete Button */
+.delete-form button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-form button:hover {
+    background-color: #e43f3f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
